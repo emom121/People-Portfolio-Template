@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+header{
+    background-color:rgb(240, 241, 237);
+    width: 100%;
+    position: fixed;
+    z-index: 5;/* عشان لما اعمل سكرول يضل هوا الي ظاهر */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;   
+    padding: 10px 200px;
+}
+header .logo{
+    text-decoration: none;
+    color: rgb(70, 113, 101);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+header .navigation a{
+    color: #467165;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    padding-left: 30px;
+}
+header .navigation a:hover{
+    color: rgb(139, 147, 118);
+}
+.container{
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+section{
+    padding: 100px ;
+}
+.main{
+    width: 100%;
+    /* عشان اول ما يفتح يكون ماخد كل الطول */
+    min-height: 100vh; 
+    /* عشان يكون النص في المنتصف */
+    display: flex;
+    align-items: center;
+    background: url(../images/bg.svg) no-repeat;
+    background-position: center ;
+    background-position-x: right;
+    background-attachment: fixed;
+    background-size: 50%;
+
+}
+.main h2{
+    color: #8b9376;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.main h2 span{ 
+    color: rgb(70, 113, 101);
+    font-size: 3rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+}
+.main h3{
+    color: #2e4d44;
+    font-size:2rem ;
+    font-weight:700 ;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main-btn{
+    color: white;
+    background-color: #467165;
+    padding: 0.9375em;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    /* عشان يرضى ياخد مسافة من تحت */
+    display: inline-block;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    border-radius:15px ;
+    transition: 0.5s ease;
+
+}
+.main-btn:hover{
+    background-color: rgb(111, 169, 153);
+    transform: scale(1.1);
+}
+
+.title{
+    /* text-align: center; */
+    color: rgb(111, 169, 153);
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom:30px ;
+}
+.subtitle{
+    color:#2e4d44;
+    font-size: 1.3em;
+    margin-bottom: 2rem;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    
+}
+.card{
+    background-color: #fff;
+    width: 17rem;
+    box-shadow:0 5px 25px  rgb(70, 113, 101,50%);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: 0.5s ease ;
+    
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.cards .content .card .info .icon{
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards .content .card .info .icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cards .content .card .info .project-subtitle{
+    color:#467165;
+    font-size: 1rem;
+}
+
+.cards .content .card .info {
+    text-align: center;
+}
+.info h3{
+    color: rgb(70, 113, 101);
+    font-size: 1rem;
+    margin: 1rem;
+    font-weight: 700;
+}
+
+.blog{
+    width: 40%;
+
+}
+.about-me{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #2e4d44;
+}
+
+.abou{
+    display:flex ;
+    flex-flow: column wrap;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+.about-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: .5rem;
+    align-items: center;
+    /* flex-wrap: wrap; */
+
+}
+hr{
+    width: 30%;
+}
+.about-me .blog .abou .about-content .date{
+    display: flex;
+    flex-direction: column;
+    font-size: .7rem;
+    
+}
+.about-me .blog .abou .about-content .icon{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.about-me .blog .abou .about-content .icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+.about-me .blog .abou .about-content .info{
+    font-size: .8rem;
+}
+
+.about-me .skills{
+    width: 40%;
+    align-self: flex-start;
+}
+
+.about-me .skills .skill div{
+    height: .5rem;
+    background-color: rgb(170, 171, 168, 0.5);
+}
+.about-me .skills .skill div .progress-p {
+    width: 90%;
+    background-color: #2e4d44;
+}
+.about-me .skills .skill div .progress-o {
+    width: 97%;
+    background-color: #2e4d44;
+}
+.about-me .skills .skill div .progress-a {
+    width: 100%;
+    background-color: #2e4d44;
+}
+.about-me .blog .blog-btn{
+    color: white;
+    background-color: rgba(62, 62, 62, 0.5);
+    padding: .8em;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border-radius:5px ;
+    transition: 0.5s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+
+.about-me .blog .blog-btn:hover{
+    background-color: rgb(111, 169, 153);
+    transform: scale(1.1);
+}
+
+.contacts{
+    background-color: rgba(62, 62, 62, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contacts .img-para{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+}
+
+.contacts .img-para .img-container{
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacts .img-para .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contacts h2.title{
+    color: white;
+    font-size: large;
+}
+.social-icons a{
+    color: white;
+    font-size: 1.7rem;
+    border-right: 1px solid white;
+    padding: 0 1rem;
+}
+.social-icons a:last-child{
+    border: none;
+}
+.social-icons a:hover{
+    color: rgba(24, 135, 103, 0.3);
+}
+.social-icons {
+    margin-top: 1rem;
+}
+
+.footer{
+    background-color: rgb(218, 223, 205);
+    color:rgb(46, 77, 68);
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+
+}
+.footer-title{
+    font-size: .8em;
+    font-weight: 600;
+}
+.footer-title span{
+    color:white ;
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
